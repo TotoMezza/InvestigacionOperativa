@@ -19,9 +19,11 @@ public class VentaDetalle extends EntidadBase {
     private Double subtotal;
 
     @NotNull
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_Articulo")
     private Articulo articulo;
 
+    @NotNull
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_Venta")
     private Venta venta;

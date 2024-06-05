@@ -17,17 +17,24 @@ import java.util.List;
 public class Articulo extends EntidadBase {
 
     @NotNull
+    @Column(name = "nombre-Articulo")
     private String nombre;
 
     @NotNull
+    @Column(name = "precio-Articulo")
     private Double precio;
 
     @NotNull
+    @Column(name = "stock-Actual")
     private int stockActual;
 
     @NotNull
-    @ManyToOne()
-    private ModeloInventario modeloInv;
+    @Column(name = "lote_Optimo")
+    private Integer loteOptimo;
+
+    @NotNull
+    @Column(name = "stock_Seguridad")
+    private Integer stockSeguridad;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
