@@ -24,6 +24,14 @@ public class Articulo extends EntidadBase {
     @Column(name = "precio-Articulo")
     private Double precio;
 
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
+    }
+
     @NotNull
     @Column(name = "stock-Actual")
     private int stockActual;
