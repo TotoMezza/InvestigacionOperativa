@@ -27,19 +27,6 @@ public class VentaDetalle extends EntidadBase {
     @JoinColumn(name = "id_Articulo")
     private Articulo articulo;
 
-    @NotNull
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_Venta")
-    private Venta venta;
-
-    public void setArticulo(Articulo articulo) {
-        this.articulo = articulo;
-    }
-
-    public void setCantidadVenta(int cantidadVenta) {
-        this.cantidadVenta = cantidadVenta;
-    }
-
     public void setSubtotal(int cantidadVenta, Articulo articulo) {
         this.subtotal = cantidadVenta*articulo.getPrecio();
     }

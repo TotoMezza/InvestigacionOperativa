@@ -40,10 +40,8 @@ public class OrdenCompra extends EntidadBase{
     @JoinColumn(name ="id_OrdenCompra")
     private List<OrdenCompraDetalle> DetallesOC = new ArrayList<>();
 
-
     public void agregarDetalleOrdenCompra(OrdenCompraDetalle ordenCompraDetalle){
         DetallesOC.add(ordenCompraDetalle);
     }
-
 
 }

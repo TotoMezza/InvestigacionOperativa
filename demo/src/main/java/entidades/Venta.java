@@ -1,6 +1,7 @@
 package entidades;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.*;
@@ -30,6 +31,7 @@ public class Venta extends EntidadBase {
     @NotNull
     @OneToMany
     @Builder.Default
+    @JoinColumn(name = "id_Venta")
     private List<VentaDetalle> ventaDetalles = new ArrayList<>();
 
     public void AgregarDetalleVenta(VentaDetalle vd) {

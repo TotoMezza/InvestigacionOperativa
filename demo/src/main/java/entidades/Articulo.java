@@ -28,10 +28,6 @@ public class Articulo extends EntidadBase {
         return precio;
     }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
-
     @NotNull
     @Column(name = "stock-Actual")
     private int stockActual;
@@ -48,7 +44,7 @@ public class Articulo extends EntidadBase {
     @NotNull
     @Builder.Default
     @JoinColumn(name = "id_Prediccion")
-    private List<Prediccion> Predicciones = new ArrayList<>();
+    private List<Prediccion> Predicciones = new ArrayList<>(); //Revisar, dudosa navegabilidad
     private TablaDemanda tablaDemanda;
 
 }
